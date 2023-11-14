@@ -7,11 +7,6 @@ terraform {
   }
 }
 
-module "azure-backup" {
-  source  = "app.terraform.io/Terraform-workshopFawaz/azure-backup/azurerm"
-  version = "1.0.2"
-  resource_group_name = "${var.prefix}-public"
-}
 
 provider "azurerm" {
   features {
@@ -206,4 +201,11 @@ resource "null_resource" "configure-cat-app" {
       host     = azurerm_public_ip.catapp-pip.fqdn
     }
   }
+}
+
+
+module "azure-backup" {
+  source              = "app.terraform.io/Terraform-workshopFawaz/azure-backup/azurerm"
+  version             = "1.0.2"
+  resource_group_name = "${var.prefix}-public"
 }
