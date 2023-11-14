@@ -204,8 +204,8 @@ resource "null_resource" "configure-cat-app" {
 }
 
 
-module "azure-backup" {
-  source              = "app.terraform.io/Terraform-workshopFawaz/azure-backup/azurerm"
-  version             = "1.0.2"
-  resource_group_name = "${var.prefix}-public"
-}
+# module "azure-backup" {
+#   source              = "app.terraform.io/Terraform-workshopFawaz/azure-backup/azurerm"
+#   version             = "1.0.2"
+#   resource_group_name = "${var.prefix}-public"
+# }
