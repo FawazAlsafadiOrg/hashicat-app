@@ -8,7 +8,7 @@ terraform {
 }
 
 module "azure-backup" {
-  source  = "ravensorb/azure-backup/azurerm"
+  source  = "app.terraform.io/Terraform-workshopFawaz/azure-backup/azurerm"
   version = "1.0.2"
   resource_group_name = "${var.prefix}-public"
 }
